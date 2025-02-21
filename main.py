@@ -8,8 +8,9 @@ def main():
 
 @app.route('/submit', methods=['POST'])
 def convert_url():
-    get_url = request.form.get("email")    
-    print(get_url)
+    get_url = request.form.get("url_user")    
+    shortened_url = short_url(get_url)
+    return render_template('index.html', shortened_url=shortened_url)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)
