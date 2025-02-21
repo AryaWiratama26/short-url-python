@@ -6,7 +6,3 @@ def short_url(long_url):
     final_url = s.tinyurl.short(long_url)
     return final_url
 
-
-input_long = input("Masukan URL : ")
-hasil_url = short_url(input_long)
-
